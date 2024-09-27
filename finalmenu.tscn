@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpdh33bhwu6hs"]
+
+[ext_resource type="Script" path="res://Finalmenu.gd" id="1_81bqw"]
+
+[node name="Finalmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_81bqw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "You have completed the maze!"
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 394.0
+offset_right = 708.0
+offset_bottom = 457.0
+theme_override_font_sizes/font_size = 40
+text = "Exit maze"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
